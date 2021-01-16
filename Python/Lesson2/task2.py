@@ -9,11 +9,8 @@ print(f'Список полученных чисел: {input_list}')
 
 i = 0
 
-while True:
-    if i >= len(input_list) -1:
-        break
+while i < len(input_list) - 1:
+    input_list[i], input_list[i + 1] = input_list[i + 1], input_list[i]
+    i +=2
 
-    input_list[i], input_list[i +1] = input_list[i+1], input_list[i]
-    i += 2
-
-print(f'Изменённый список чисел {input_list}')    
+print(f'Изменённый список чисел {input_list}')
