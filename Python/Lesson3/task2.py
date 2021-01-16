@@ -15,7 +15,6 @@
 # 
 #  Реализовать вывод данных о пользователе одной строкой.
 
-
 def user_info(user_name, user_sername, user_year_birth, user_city, user_email, user_tel):    
     return print(
 ' Здравствуйте ' + user_sername + ' ' + user_name + '!' + \
@@ -23,7 +22,6 @@ def user_info(user_name, user_sername, user_year_birth, user_city, user_email, u
 ' Проживаете в городе ' + user_city + '.' + \
 ' Ваш почтовый яшик: ' + user_email + '.' + \
 ' Номер телефона: ' + user_tel)
-
 
 user_info(
     user_name = input("Введите Ваше имя: "),
