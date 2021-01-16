@@ -17,10 +17,14 @@
 
 my_list = [7, 5, 46, 79, 666, 3, 3, 2,]
 
-user_el = int(input('Введите элемент: '))
+user_el = map(int, input('Введите элемент: ').split( ))
 
-my_list.append(user_el)
-my_list = sorted(my_list)
-str_rev = my_list[::-1]
+my_list.extend(user_el)
+my_list.sort(reverse = 1)
 
-print(str_rev)
+print(' '.join(map(str, my_list)))
+
+
+# my_list.append(user_el)
+# my_list = sorted(my_list)
+# str_rev = my_list[::-1]
