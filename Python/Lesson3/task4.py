@@ -19,3 +19,21 @@
 #  Второй — более сложная реализация
 #  без оператора **,
 #  предусматривающая использование цикла.
+
+def my_func(x, y):
+    return x ** y
+
+def my_func2(x, y):
+    return pow(x, y)
+
+def my_func3(x, y):
+    counter = 1
+    result = 1 * x
+    while counter < y:
+        result = result * (1 * x)
+        counter += 1
+    return result
+
+print(f'1й вариант возведения в степень: {my_func(int(input("Введите X: ")), int(input("Введите Y: ")))}')
+print(f'2й вариант возведения в степень: {my_func2(int(input("Введите X: ")), int(input("Введите Y: ")))}')
+print(f'3й вариант возведения в степень: {my_func3(int(input("Введите X: ")), int(input("Введите Y: ")))}')
