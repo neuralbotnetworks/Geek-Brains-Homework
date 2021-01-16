@@ -5,7 +5,7 @@
 
 input_list = [int(i) for i in input('Введите числа через пробел: ').split( )]
 
-print(f'Список полученных числа: {input_list}')
+print(f'Список полученных чисел: {input_list}')
 
 i = 0
 
