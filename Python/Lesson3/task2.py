@@ -28,12 +28,11 @@ def user_info():
     user_tel = input('Введите ваш номер телефона: ')
     
     user_input = (
-' Здравствуйте ' + user_sername + \
-' ' + user_name + \
-'! Вы родились в ' + user_year_birth + ' году.\
-Проживаете в городе ' + user_city + '.\
-Ваш почтовый яшик: ' + user_email + '.\
-Номер телефона: ' + user_tel)
+' Здравствуйте ' + user_sername + ' ' + user_name + '!' + \
+' Вы родились в ' + user_year_birth + ' году.' + \
+' Проживаете в городе ' + user_city + '.' + \
+' Ваш почтовый яшик: ' + user_email + '.' + \
+' Номер телефона: ' + user_tel)
 
     return user_input
 
