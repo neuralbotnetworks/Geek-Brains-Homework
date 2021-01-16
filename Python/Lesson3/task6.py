@@ -23,3 +23,14 @@
 #  Необходимо использовать
 #  написанную ранее
 #  функцию int_func().
+
+def int_func(text):
+    return text.title()
+
+output_1 = []
+
+for word in input('Введите строку, через пробел: ').split(' '):
+    output_1.append(int_func(word))
+
+
+print(f'Результат преобразования: {" ".join(output_1)}')
