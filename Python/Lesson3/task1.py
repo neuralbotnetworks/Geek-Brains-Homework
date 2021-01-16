@@ -5,15 +5,14 @@
 #  Числа запрашивать у пользователя,
 #  предусмотреть обработку ситуации деления на ноль.
 
-
-def user_int_result():
+def user_int_result(int1, int2):
     try:
-        int1 = int(input('Введите первое число: '))
-        int2 = int(input('Введите второе число: '))
-        calc_result = int1 / int2
-        return calc_result
+        return print(int1 / int2)
     except ZeroDivisionError:    
         err_z_d_e = print('Я не буду выполнять такие вычисления')
         return err_z_d_e
-
-print(user_int_result())
+        
+user_int_result(
+    int(input('Введите первое число: ')),
+    int(input('Введите второе число: ')),
+)

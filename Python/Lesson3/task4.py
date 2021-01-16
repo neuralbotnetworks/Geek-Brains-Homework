@@ -28,12 +28,12 @@ def my_func2(x, y):
 
 def my_func3(x, y):
     counter = 1
-    result = 1 * x
+    result = x
     while counter < y:
-        result = result * (1 * x)
+        result = result * x
         counter += 1
     return result
 
-print(f'1й вариант возведения в степень: {my_func(int(input("Введите X: ")), int(input("Введите Y: ")))}')
-print(f'2й вариант возведения в степень: {my_func2(int(input("Введите X: ")), int(input("Введите Y: ")))}')
-print(f'3й вариант возведения в степень: {my_func3(int(input("Введите X: ")), int(input("Введите Y: ")))}')
+print(f'1й вариант возведения в степень: {my_func(float(input("Введите X: ")), int(input("Введите Y: ")))}')
+print(f'2й вариант возведения в степень: {my_func2(float(input("Введите X: ")), int(input("Введите Y: ")))}')
+print(f'3й вариант возведения в степень: {my_func3(float(input("Введите X: ")), int(input("Введите Y: ")))}')
