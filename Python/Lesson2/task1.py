@@ -20,14 +20,3 @@ all_list = [l_bool, l_dict, l_float, l_int, l_list, l_str, l_tuple]
 
 for variable in all_list:
     print(type(variable))
-
-
-
-
-
-
-
-
-
-
-
