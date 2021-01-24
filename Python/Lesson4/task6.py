@@ -7,3 +7,29 @@
 #  Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10 завершаем цикл.
 #  Во втором также необходимо предусмотреть условие, при котором повторение элементов списка будет прекращено.
 
+from itertools import count, cycle
+
+
+limit = 10
+cnt = 0
+
+print('-' * 60)
+for el in count(int(input('Укажите начальное число '))):
+    cnt += 1
+    print(el)
+    if cnt >= limit:
+        cnt = 0
+        break
+
+
+my_list = ['Каждый', 'Developer', 'Обязан', 'Знать', 'Где', 'Лежит', 'Backup', True]
+
+print('-' * 60)
+for el in cycle(my_list):
+    cnt +=1
+    print(el)
+    if cnt >= limit:
+        cnt = 0
+        break
+
+print('-' * 60)

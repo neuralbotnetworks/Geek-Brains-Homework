@@ -5,11 +5,14 @@
 
 from functools import reduce
 
-
 def my_func(el_p, el):
     return el_p * el
 
-print(f'Список четных значений \
+print('-' * 60)
+print(f'Список четных значений: \n \
 {[el for el in range(99, 1001) if el % 2 == 0]}')
-print(f'Произведение всех элементов списка: \
+
+print('-' * 60)
+print(f'Произведение всех элементов списка: \n \
 {reduce(my_func, [el for el in range(99, 1001) if el % 2 == 0])}')
+print('-' * 60)
