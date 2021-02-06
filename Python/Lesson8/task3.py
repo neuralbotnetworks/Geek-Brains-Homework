@@ -1,6 +1,6 @@
 """
 ## 3.)
-  Создайте собственный класс-исключение,
+  Создайте собственный exception class,
  который должен проверять содержимое 
  списка на наличие только чисел. 
   
@@ -9,7 +9,7 @@
   Необходимо запрашивать у пользователя 
   данные и заполнять список. 
   
-  Класс-исключение должен контролировать 
+  Exception class должен контролировать 
   типы данных элементов списка.
 
  ### Примечание: 
@@ -40,21 +40,20 @@
  и отобразить соответствующее сообщение. 
  При этом работа скрипта не должна завершаться.
 """
+from classes import NumberChecker
 
-class NumberChecker(Exception):
-    def __init__(self, txt):
-        self.txt = txt
+print('Для завершения, введите: "STOP"')
+input_list = []
 
-print('─' * 60)
-inp_data = input("Введите число ⋙  ")
-print('─' * 60)
-try:
-    inp_data = int(inp_data)
-    if inp_data < 0:
-        raise NumberChecker("Вы ввели строку!")
-except ValueError:
-    print("Вы ввели не число")
-except NumberChecker as err:
-    print(err)
-else:
-    print(f"Все хорошо. Ваше число: {inp_data}")
+while True:
+    user_input = input('Введите число: ')
+
+    if user_input.lower() == 'stop':
+        print(f'Вы ввели числа: {input_list}')
+        break
+    try:
+        if not user_input.isnumeric():
+            raise NumberChecker('NaN!')
+        input_list.append(int(user_input))
+    except NumberChecker as error:
+        print('Это не число!')
